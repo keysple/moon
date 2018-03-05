@@ -1,15 +1,15 @@
 <template>
     <div>
-        <Tabs value="name1" >
+        <Tabs value="introduce" class="tabHeader" >
             <TabPane label="介绍" name="introduce" icon="happy">
                 <introduce></introduce>
             </TabPane>
             <TabPane label="编辑" name="edit" icon="edit">
                 <edit></edit>
             </TabPane>
-            <TabPane label="文件管理" name="fileManger" icon="ios-folder">
-                <file-manger></file-manger>
-            </TabPane>
+            <!--<TabPane label="文件管理" name="fileManger" icon="ios-folder">-->
+                <!--<file-manger></file-manger>-->
+            <!--</TabPane>-->
             <TabPane label="致谢" name="thanks" icon="thumbsup">
                 <thanks></thanks>
             </TabPane>
@@ -21,7 +21,6 @@
 </template>
 
 <script>
-
     import Icon from "iview/src/components/icon/icon";
     import Introduce from "./LandingPage/introduce";
     import Edit from "./LandingPage/edit";
@@ -40,12 +39,18 @@
             Icon
         },
         methods: {
-            // open(link) {
-            //     this.$electron.shell.openExternal(link)
-            // }
+
         }
     }
 </script>
 
 <style lang='less'>
+    .tabHeader{
+        .ivu-tabs-bar{
+            padding-left: 230px;
+            .ivu-tabs-nav-container{
+                font-size: 18px;
+            }
+        }
+    }
 </style>
